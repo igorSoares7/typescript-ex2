@@ -1,10 +1,9 @@
 "use strict";
-var Prioridade;
-(function (Prioridade) {
-    Prioridade[Prioridade["Baixa"] = 0] = "Baixa";
-    Prioridade[Prioridade["Media"] = 1] = "Media";
-    Prioridade[Prioridade["Alta"] = 3] = "Alta";
-})(Prioridade || (Prioridade = {}));
-console.log(Prioridade.Alta);
-function criarTarefa(titulo, descricao, prioridade) {
-}
+Object.defineProperty(exports, "__esModule", { value: true });
+const prioridade_1 = require("./prioridade");
+const tarefas_1 = require("./tarefas");
+const novaTarefa = (0, tarefas_1.criarTarefa)("Concluir exercícios", "Fazer todos os exercícios", prioridade_1.Prioridade.Alta);
+(0, tarefas_1.exibirTarefa)(novaTarefa);
+console.log('------------------');
+(0, tarefas_1.concluirTarefa)(novaTarefa);
+(0, tarefas_1.exibirTarefa)(novaTarefa);
